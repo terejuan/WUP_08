@@ -24,6 +24,7 @@ abline(simp)
 summary.lm(simp)
 ```
 
+ 
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
 
@@ -32,5 +33,36 @@ new <- data.frame(NECK=c(17,22,26))
 predict(simp,new)
 predict(simp,new,se.fit=TRUE)
 ```
-## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
+
+## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+as we compare LENGHT and WEIGHT to the first model of LENGHT and NECK, Adjusted R-squared gave us a small number of 0.7423 and Residual standard error of 5.432. comparing these two model Adjusted R-squre was better on first model LENGHT and NECK size.
+
+```{r}
+simp <- lm(CHEST~NECK,data=bears)
+plot(CHEST~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+
+```{r}
+simp <- lm(HEADWTH~NECK,data=bears)
+plot(HEADWTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+```{r}
+simp <- lm(LENGTH~NECK,data=bears)
+plot(LENGTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
