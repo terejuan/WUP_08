@@ -91,5 +91,12 @@ summary.lm(simp)
 As i compare LENGTH ~ AGE to the first model of LENGTH and NECK
 Adjusted R-square gave us a small number of 0.5073 with a Residual Standard error of 7.511. comparing this two the first model LENGHT and NECK is better because the Adjusted R-square was bigger  of 0.7476 and the residual standard error of 5.376 was small. making this model HEADWTH~NECK not better. This model was on of the worst ones in all because it gave us a really big Adjusted R-squared number, and a small Adjusted R-squared number.
 
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
 
 
