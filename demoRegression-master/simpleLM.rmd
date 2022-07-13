@@ -51,7 +51,7 @@ plot(CHEST~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+as we compare CHEST and NECK to the first model of LENGHT and NECK, Adjusted R-squared gave us a good number of 0.8714 and Residual standard error of 3.353. comparing these two model Adjusted R-squre was better on the CHEST and NECK size.
 
 ```{r}
 simp <- lm(HEADWTH~NECK,data=bears)
@@ -60,9 +60,17 @@ abline(simp)
 summary.lm(simp)
 ```
 
+As i compare HEADWTH~NECK to the first model of LENGTH and NECK
+Adjusted R-square gave us a small number of 0.664 with a Residual Standard error of 0.8765. comparing this two the first model LENGHT and NECK is better because the Adjusted R-square was bigger  of 0.7476 and the residual standard error of 5.376 was small
+
+
 ```{r}
-simp <- lm(LENGTH~NECK,data=bears)
-plot(LENGTH~NECK,data=bears)
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+when comparing LENGTH~HEADLEN with the first model of LENGTH~NECK Adjusted R-square gave us a larger number of 0.8434 and a small Residual standard error of 4.235 making this a better prediction then the on on model 1 where we compare LENGTH~NECK.
+
+
