@@ -98,5 +98,5 @@ abline(simp)
 summary.lm(simp)
 ```
 
-
+By comparing LENGTH ~ HEADWTH with the first model LENGTH ~ NECK, it seems that this model is not better then the other because it gave us a Residual standard error of 0.5409 and Adjusted R-squared of 0.5321. It gave us a small Adjusted R-squared and a really hight Residual standard error. making it the wort model.
 
