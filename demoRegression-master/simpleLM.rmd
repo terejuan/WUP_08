@@ -43,7 +43,7 @@ abline(simp)
 summary.lm(simp)
 ```
 
-as we compare LENGHT and WEIGHT to the first model of LENGHT and NECK, Adjusted R-squared gave us a small number of 0.7423 and Residual standard error of 5.432. comparing these two model Adjusted R-squre was better on first model LENGHT and NECK sizez, making these model not better.
+as we compare LENGHT and WEIGHT to the first model of LENGHT and NECK, Adjusted R-squared gave us a small number of 0.7423 and Residual standard error of 5.432. comparing these two model Adjusted R-squre was better on first model LENGHT and NECK size, making these model not better.
 
 ```{r}
 simp <- lm(CHEST~NECK,data=bears)
@@ -99,4 +99,12 @@ summary.lm(simp)
 ```
 
 By comparing LENGTH ~ HEADWTH with the first model LENGTH ~ NECK, it seems that this model is not better then the other because it gave us a Residual standard error of 0.5409 and Adjusted R-squared of 0.5321. It gave us a small Adjusted R-squared and a really hight Residual standard error. making it the wort model.
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+As we predict LENGTH ~ CHEST with the firts model LENGTH ~ NECK, we can see that this model LENGTH ~ CHEST is better because it gave us a biger number on the Adjusted R-squared of 0.7869 and Residual standard error of  4.939. Adjusted R-squared number was bigger to predict LENGTH ~ CHEST then to predict LENGTH ~ NECK, and the Residual standard error was smaler then to predict LENGTH ~ NECK.
 
