@@ -108,3 +108,4 @@ summary.lm(simp)
 ```
 As we predict LENGTH ~ CHEST with the firts model LENGTH ~ NECK, we can see that this model LENGTH ~ CHEST is better because it gave us a biger number on the Adjusted R-squared of 0.7869 and Residual standard error of  4.939. Adjusted R-squared number was bigger to predict LENGTH ~ CHEST then to predict LENGTH ~ NECK, and the Residual standard error was smaler then to predict LENGTH ~ NECK.
 
+in conclusion as we make our predictions trought all these variables we can se that LENGTH ~ HEADLEN was one of best results we, it gaves us the smalest Residual standard error and the biggest Adjusted R-squared, fallowed by LENGTH ~ CHEST, LENGTH ~ NECK, then LENGTH ~ WEIGHT, fallowed by two of the worst predictions we got which are  LENGTH ~ HEADWTH  fallowed by LENGTH ~ AGE. These are the two worst because they gave us the smallest Adjusted R-squared numbers and the biggest Residual standard error.
